@@ -1,8 +1,0 @@
-\contentsline {section}{\numberline {1}Kinetic Theory of Gases}{3}{}%
-\contentsline {subsection}{\numberline {1.1}The Maxwell-Boltzmann Distribution}{3}{}%
-\contentsline {paragraph}{\numberline {1.1.0.1}The Velocity Distribution}{3}{}%
-\contentsline {paragraph}{\numberline {1.1.0.2}The Speed Distribution}{4}{}%
-\contentsline {paragraph}{\numberline {1.1.0.3} $\langle v \rangle $ and $\langle v^2 \rangle $ }{5}{}%
-\contentsline {paragraph}{\numberline {1.1.0.4}The Mean Kinetic Energy of a Gas Molecule}{6}{}%
-\contentsline {paragraph}{\numberline {1.1.0.5}The Maximum of $f(v)$ }{6}{}%
-\contentsline {subsection}{\numberline {1.2}Chapter Summary}{7}{}%
