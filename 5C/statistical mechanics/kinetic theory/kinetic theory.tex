@@ -311,7 +311,7 @@ Note* $v_\text{max}$ is not the maximum velocity a particle can have -- it is th
     \includegraphics[width = 6cm]{screenshot 26.png}
 \end{figure}
 
-\subsection{Chapter Summary}
+\paragraph{Chapter Summary} \mbox{} \\
 
 A physical situation that is very important in kinetic theory is the
 \textit{translational} motion of atoms or molecules in a gas. The probability
@@ -346,6 +346,175 @@ The rms velocity of a gas molecule, $v_\text{rms} = \sqrt{\langle v^2 \rangle}$
 \[
   v_\text{rms} = \sqrt{\frac{3kT}{m}}
 \] \vspace{5px}
+
+\subsection{Pressure}
+
+
+The pressure $p$ due to a gas is defined as the ratio of the perpendicular
+contact force to the area of contact. The pressure $p$ of a volume $V$ of gas
+with a \# molecule density $n$ depends on the temperature $T$ via an
+\textbf{equation of state}: 
+
+\[
+p = f(T, V, n) = nk_BT
+\] \vspace{5px}
+
+\subsection{Molecular Distributions}
+
+Previously, we derived the Maxwell-Boltzmann speed distribution function
+$f(v)$. We denote the total \# of molecules per unit volume by the symbol $n$.
+The \# of molecules per unit volume traveling with speeds between $v$ and $v
++ dv$ is then given by $nf(v)$. We now seek to determine the distribution
+function of molecules traveling in different directions. 
+
+\paragraph{Solid Angles} \mbox{}\\ 
+
+An angle $\theta$ in a circle is defined by dividing the arc length $s$ which
+the angle subtends by the radius $r$: 
+
+\[
+\theta = \frac{s}{r}
+\] 
+
+The angle is measured in radians. The angle subtended by the whole circle at
+its center is then, 
+
+\[
+\frac{2\pi r}{r} = 2\pi
+\] 
+
+Analogously, the solid angle $\Omega$ in a sphere is defined by dividing the
+surface area $A$ which the solid angle subtends by the radius squared, so that 
+
+\[
+\Omega = \frac{A}{r^2}
+\] 
+
+The solid angle is measured in steradians. The solid angle subtended by the
+whole sphere at its center is then, 
+
+\[
+\frac{4\pi r^2}{r^2} = 4\pi
+\] 
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width = 4cm]{screenshot 27.png}
+\end{figure}
+
+\paragraph{The \# of Molecules Traveling in a Direction at a Certain
+Speed} \mbox{} \\
+
+Since all molecules are equally likely to be traveling in any direction, the
+fraction whose trajectories lie in an elemental solid angle $d\Omega$ is 
+
+\[
+\frac{d \Omega}{4\pi} 
+\] \vspace{5px}
+
+If we choose any direction, then the solid angle $d\Omega$ corresponding to
+molecules traveling at angles between $\theta$ and $\theta + d\theta$ to that
+direction is equal to the area of the annular region given by 
+
+\[
+d\Omega = 2\pi\sin\theta d\theta, 
+\] \vspace{5px}
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width = 5cm]{screenshot 28.png}
+\end{figure}
+
+
+
+so that 
+
+\[
+\frac{d\Omega}{4\pi} = \frac{1}{2} \sin\theta d\theta
+\] \vspace{5px}
+
+Therefore, the \# of molecules per unit volume that have speeds between $v$ and
+$v+dv$ and are traveling at angles between $\theta$ and $\theta + d\theta$ to
+the chosen direction is given by 
+
+\[
+  \boxed{ nf(v) \, dv \, \frac{1}{2}\sin\theta\,d\theta}
+\] \vspace{5px}
+
+\paragraph{The \# of Molecules Hitting a Wall} \mbox{} \\
+
+We now let our direction lie perpendicular to a wall of area $A$. In a small
+time $dt$, the molecules traveling at angle $\theta$ to the normal to the wall
+sweep out a volume
+
+\[
+A (v\,dt) \cos\theta
+\] \vspace{5px}
+
+Multiplying this volume by the above boxed expression (the \# of molecules per
+unit volume with speeds $\in (v, v+dv)$ and traveling at angles $\in (\theta,
+\theta + d\theta)$ implies that in time $dt$, the \# of molecules hitting
+a wall of area $A$ is 
+
+\[
+A v\, dt \cos\theta n \, f(v) \, dv\, \frac{1}{2}\sin\theta d\theta
+\] \vspace{5px}
+
+Hence, the \# of molecules hitting a unit area of wall in unit time, with
+speeds between $v$ and $v+dv$ and traveling at angles between $\theta$ and
+$\theta + d\theta$ is given by
+
+\[
+  \boxed{v\cos\theta n f(v) \, dv \, \frac{1}{2}\sin\theta d\theta}
+\] \vspace{5px}
+
+
+\paragraph{The Ideal Gas Law}
+
+We can now calculate the pressure of a gas on its container. Each molecule
+hitting the wall of its container has a momentum change of $2mv \cos \theta$
+perpendicular to the wall. If we multiply $2mv\cos\theta$ (the normal momentum
+change for one molecule) by the \# of molecules hitting the wall per unit area
+per unit time, with the speed and $\theta$ in the right direction, integrating
+over $\theta$ and $v$ should yield the pressure $p$. \\
+
+This should make sense as, 
+
+\[
+\text{d pressure} = \frac{F}{A} = \frac{\frac{dp}{dt}}{A} = \frac{dp}{At}
+\] \vspace{5px}
+
+Integrating, 
+
+\begin{align*}
+  p &= \int_{0}^{\infty} \int_{0}^{\pi/2}  (2mv\cos\theta) \left( v\cos\theta
+  n f(v) dv \frac{1}{2}\sin\theta d\theta \right) \\
+    &= mn \int_{0}^{\infty} v^2 f(v) \, dv \int_{0}^{\pi/2} \cos^2\theta
+    \sin\theta \, d\theta,
+\end{align*}  
+
+Using the integral $\int_{0}^{\pi/2} \cos^2\theta\sin\theta \, d\theta
+= \frac{1}{3}$, we get
+
+\[
+  \boxed{p = \frac{1}{3}nm\langle v^2 \rangle.}
+\] \vspace{5px}
+
+Using $\langle v^2 \rangle = \frac{3kT}{m}$, 
+
+\[
+  \boxed{p = nk_BT}
+\] \vspace{5px}
+
+which is the \textbf{ideal gas equation}. This completes the kinetic theory
+derivation of the ideal gas law
+
+
+
+
+
+
+
 
 
 
